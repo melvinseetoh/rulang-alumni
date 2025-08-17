@@ -29,8 +29,7 @@ import {
   FileText,
   BarChart3,
   PieChart,
-  ArrowUpRight,
-  ArrowDownRight
+  ArrowUpRight
 } from "lucide-react"
 
 export default function AdminDashboard() {
@@ -151,13 +150,8 @@ export default function AdminDashboard() {
                         {stat.changeType === "increase" && (
                           <ArrowUpRight className="h-4 w-4 text-green-600 mr-1" />
                         )}
-                        {stat.changeType === "decrease" && (
-                          <ArrowDownRight className="h-4 w-4 text-red-600 mr-1" />
-                        )}
                         <span className={`text-sm ${
-                          stat.changeType === "increase" ? "text-green-600" :
-                          stat.changeType === "decrease" ? "text-red-600" :
-                          "text-gray-500"
+                          stat.changeType === "increase" ? "text-green-600" : "text-gray-500"
                         }`}>
                           {stat.change}
                         </span>
