@@ -10,7 +10,7 @@ import {
   Gift, 
   Bell, 
   Settings,
-  IdCard,
+  CreditCard,
   Search,
   MessageCircle,
   TrendingUp,
@@ -200,7 +200,7 @@ export default function MemberDashboard() {
                 <h3 className="font-montserrat font-semibold">Your Membership</h3>
                 <Link href="/mockups/member/membership">
                   <Button variant="ghost" size="sm">
-                    <IdCard className="h-4 w-4 mr-2" />
+                    <CreditCard className="h-4 w-4 mr-2" />
                     View Card
                   </Button>
                 </Link>
