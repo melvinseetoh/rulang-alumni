@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -153,7 +155,7 @@ export default function MemberBenefitsPage() {
     return {
       total: allBenefits.length,
       active: allBenefits.filter(b => new Date(b.validUntil) > now).length,
-      exclusive: allBenefits.filter(b => b.memberExclusive).length,
+      exclusive: allBenefits.filter(b => 'memberExclusive' in b && b.memberExclusive).length,
       categories: new Set(allBenefits.map(b => b.category)).size
     }
   }, [allBenefits])
@@ -405,7 +407,7 @@ export default function MemberBenefitsPage() {
                               </div>
                             </div>
                           </div>
-                          {benefit.memberExclusive && (
+                          {'memberExclusive' in benefit && benefit.memberExclusive && (
                             <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
                               Member Only
                             </span>
@@ -430,7 +432,7 @@ export default function MemberBenefitsPage() {
 
                         {/* Location & Validity */}
                         <div className="space-y-2 text-xs text-gray-500">
-                          {benefit.location && (
+                          {'location' in benefit && benefit.location && (
                             <div className="flex items-center space-x-1">
                               <MapPin className="h-3 w-3" />
                               <span>{benefit.location}</span>

@@ -64,7 +64,7 @@ export function ContactQRCode({
     if (!qrCodeUrl) return
 
     try {
-      if (navigator.share && navigator.canShare) {
+      if (navigator.share && navigator.canShare && navigator.canShare()) {
         // Convert data URL to blob for native sharing
         const response = await fetch(qrCodeUrl)
         const blob = await response.blob()

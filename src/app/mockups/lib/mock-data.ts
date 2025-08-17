@@ -38,7 +38,7 @@ export const mockMembers = [
     company: "Global Marketing Inc",
     location: "Singapore",
     profilePhoto: "/api/placeholder/100/100",
-    connectionStatus: "connected",
+    connectionStatus: "connected" as const,
     mutualConnections: 5,
     commonInterests: ["Photography", "Travel"]
   },
@@ -50,7 +50,7 @@ export const mockMembers = [
     company: "Singapore General Hospital",
     location: "Singapore",
     profilePhoto: "", // No profile photo - will show placeholder
-    connectionStatus: "pending",
+    connectionStatus: "pending" as const,
     mutualConnections: 3,
     commonInterests: ["Sports", "Reading"]
   },
@@ -62,7 +62,7 @@ export const mockMembers = [
     company: "Ministry of Education",
     location: "Singapore",
     profilePhoto: "/api/placeholder/100/100",
-    connectionStatus: "not-connected",
+    connectionStatus: "not-connected" as const,
     mutualConnections: 8,
     commonInterests: ["Education", "Arts"]
   },
@@ -74,7 +74,7 @@ export const mockMembers = [
     company: "DBS Bank",
     location: "Singapore",
     profilePhoto: "", // No profile photo - will show placeholder
-    connectionStatus: "connected",
+    connectionStatus: "connected" as const,
     mutualConnections: 2,
     commonInterests: ["Finance", "Technology"]
   },
@@ -86,7 +86,7 @@ export const mockMembers = [
     company: "Tech Innovations Pte Ltd",
     location: "Singapore",
     profilePhoto: "", // No profile photo - will show placeholder
-    connectionStatus: "request-received",
+    connectionStatus: "request-received" as const,
     mutualConnections: 4,
     commonInterests: ["Technology", "Gaming", "Photography"]
   },
@@ -98,7 +98,7 @@ export const mockMembers = [
     company: "Urban Design Studio",
     location: "Singapore",
     profilePhoto: "/api/placeholder/100/100",
-    connectionStatus: "not-connected",
+    connectionStatus: "not-connected" as const,
     mutualConnections: 1,
     commonInterests: ["Design", "Arts", "Travel"]
   }

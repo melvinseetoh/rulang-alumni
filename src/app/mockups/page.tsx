@@ -160,21 +160,13 @@ export default function MockupsIndex() {
                       const LinkIcon = link.icon
                       return (
                         <div key={link.name}>
-                          {link.disabled ? (
-                            <div className="flex items-center space-x-3 px-3 py-2 text-gray-400 cursor-not-allowed">
-                              <LinkIcon className="h-4 w-4" />
-                              <span className="text-sm">{link.name}</span>
-                              <span className="text-xs bg-gray-100 px-2 py-1 rounded">Coming Soon</span>
-                            </div>
-                          ) : (
-                            <Link
-                              href={link.href}
-                              className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md transition-colors group"
-                            >
-                              <LinkIcon className="h-4 w-4 group-hover:text-primary" />
-                              <span className="text-sm group-hover:text-primary">{link.name}</span>
-                            </Link>
-                          )}
+                          <Link
+                            href={link.href}
+                            className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md transition-colors group"
+                          >
+                            <LinkIcon className="h-4 w-4 group-hover:text-primary" />
+                            <span className="text-sm group-hover:text-primary">{link.name}</span>
+                          </Link>
                         </div>
                       )
                     })}
