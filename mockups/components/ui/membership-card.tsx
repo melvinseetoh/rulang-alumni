@@ -1,5 +1,4 @@
 import * as React from "react"
-import { QRCodeSVG } from "qr-code-generator/src/qr-code-svg"
 import { Calendar, MapPin, GraduationCap, Building } from "lucide-react"
 import { mockUser } from "../../lib/mock-data"
 
